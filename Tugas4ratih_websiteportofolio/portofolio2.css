@@ -1,0 +1,163 @@
+/* Reset margin dan padding */
+body, h2, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variabel CSS */
+:root {
+    --primary-color: rgb(33, 9, 63);
+    --primary-color-dark: rgb(252, 251, 250);
+    --secondary-color: rgb(252, 115, 230);
+    --text-dark: rgb(252, 252, 252);
+    --extra-light: #ffffff;
+    --max-width: 1200px;
+}
+
+/* Reset global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(33, 9, 63);
+}
+
+/* Gaya untuk navbar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(87, 73, 94);
+    z-index: 99;
+}
+
+.nav__content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav .logo a {
+    color: var(--primary-color-dark);
+    transition: color 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+    margin-left: auto; /* Geser ke kanan */
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.3s, border-color 0.3s;
+}
+
+ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* Gaya untuk heading */
+.h2 {
+    text-align: center;
+    color: rgb(248, 251, 251);
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+hr {
+    width: 50%;
+    margin: 10px auto;
+    border: none;
+    height: 2px;
+    background-color: rgb(252, 255, 255);
+}
+
+/* Gaya untuk kotak portofolio */
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.box div {
+    background-color: rgb(252, 115, 230);
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 18px;
+    color: rgb(40, 17, 66);
+    margin-top: 10px;
+}
+
+.details {
+    font-size: 14px;
+    color: rgb(231, 29, 29);
+}
+
+/* Media Query untuk responsivitas */
+@media (width < 750px) {
+    nav .nav__content {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
